@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Copper Cup is your bike café offering specialty coffee, artisan food, craft beer, bicycle repairs, and hands-on maintenance workshops.">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script defer src="app.js"></script> <!-- Run after HTML body-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@300;400;600&family=Bebas+Neue&display=swap" rel="stylesheet"> 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/5a35a19610.js" crossorigin="anonymous"></script>
+
+    <title>COPPER CUP | your bike café</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+    <img src="images/logo.png" class="navbar__logo" alt="Copper Cup logo">
+        <div class="navbar__bars">
+            <div class="hamburger" id="menu">
+            <span class="line-1"></span>
+            <span class="line-2"></span>
+            <span class="line-3"></span>
+        </div>
+        </div>
+        
+        <div class="navbar__menu">
+            <a href="#specialities" class="navbar__menu--links">food & drink</a>
+            <a href="#repairs" class="navbar__menu--links">bike repair</a>
+            <a href="#repairs" class="navbar__menu--links">workshops</a>
+            <a href="#contact" class="navbar__menu--links">contact</a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section -->
+       <div class="hero">
+        <div class="hero__container">
+            <div class="hero__container--left hidden">
+                <section class="hero__container--section">
+
+                <h1>your bike café</h1>
+                <p>While you enjoy our homemade food, freshly brewed coffee 
+                   or a cool tapped beer the bicycle is also being repaired. 
+                   Want to fix it yourself? No problem! Learn how by joining 
+                   one of our workshops!</p>
+
+                   <button class="hero__container--btn">
+                    <a href="#repairs" id="button">find a workshop</a>
+                   </button>
+                </section>
+            </div>
+
+            <div class="hero__container--right hidden">
+            </div>
+        </div>
+       </div>
+    <!-- Hero Section End -->
+
+    <section class="specialities" id="specialities">
+       <div class="specialities__head">
+        <h2>Specialities</h2>
+        <h5>This and so much more... <i class="fa-solid fa-file-arrow-down fa-sm"></i></h5>
+       </div>
+
+       <div class="gallery-wrap">
+        <img src="images/backbtn.png" class="prevBtn" id="prevBtn" alt="Previous" onerror="this.src='https://mdohr07.github.io/coffeestop/images/backbtn.png'">
+
+        <div class="specialities__gallery">
+            <div>
+                <span><img src="images\gallery\burger.jpg" alt="Burger"></span>
+                <span><img src="images\gallery\cappu.jpg" alt="Kaffeespezialitäten"></span>
+            </div>
+            <div>
+                <span><img src="images\gallery\torte.jpg" alt="Torten"></span> 
+                <span><img src="images\gallery\matcha.jpg" alt="Matcha"></span>
+            </div>
+            <div>
+                <span><img src="images\gallery\sandy.jpg" alt="Sandwiches"></span>
+                <span><img src="images\gallery\waffel.jpg" alt="Waffeln"></span>
+            </div>
+            <div>
+                <span><img src="images\gallery\spaghetti.jpg" alt="Spaghetti"></span>
+                <span><img src="images\gallery\pizza.jpg" alt="Pizzen"></span>
+            </div>
+        </div>
+
+        <img src="images/forwardbtn.png" class="nextBtn" id="nextBtn" alt="Next" onerror="this.src='https://mdohr07.github.io/coffeestop/images/forwardbtn.png'">
+       </div>
+    
+    </section>
+
+<!-- Repairs Section -->
+<div class="repairs__bg hidden"></div>
+    <div class="repairs hidden" id="repairs">
+        <section class="repairs__left">
+            <section>
+            <h2>Bike repairs</h2>
+            <h4>Walk-ins are okay, but appointments are better.</h4>
+            </section>
+            
+            <div class="repairs__contact-details">
+                <p><b>Book an appointment</b><br>
+                TEL.: <a href="tel:+15552342877" class="contact-link">+1 (555) 234-2877</a><br>
+                ALT. TEL / WHATSAPP: <a href="tel:+15552342878" class="contact-link">+1 (555) 234-2878</a> <span class="contact-badge">Alt</span><br>
+                EMERGENCY DISPATCH: <a href="tel:+15552342453" class="contact-link">+1 (555) 234-BIKE</a>
+                </p>
+
+                <p style="margin-top: 1rem;"><b>Direct Email</b><br>
+                MAIN: <a href="mailto:hello@coppercup.com" class="contact-link">hello@coppercup.com</a><br>
+                SERVICE DESK: <a href="mailto:repairs@coppercup.com" class="contact-link">repairs@coppercup.com</a> <span class="contact-badge">Alt</span>
+                </p>
+            </div>
+        </section>
+
+<!-- Map -->
+    <section class="repairs__middle">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86077.58782390146!2d-122.38158564299946!3d47.61317462060856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ab5b90f47e3%3A0xb355529f7f45b85a!2sSeattle%2C%20WA!5e0!3m2!1sen!2sus!4v1714500000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Copper Cup Bike Café Map"></iframe>
+    </section>
+
+    <section class="repairs__right">
+        <div>
+            <b>Main Clubhouse & Workshop</b>
+            <address>
+            1420 Copper Creek Blvd, Suite 100<br>
+            Seattle, WA 98101
+            </address>
+
+            <b>Alternative Express Hub</b>
+            <address>
+            852 Velodrome Way, Bike District<br>
+            Seattle, WA 98109 <span class="contact-badge">Alt Hub</span>
+            </address>
+        </div>
+
+        <div class="opening-times">
+            <p><b>Opening times</b></p>
+            Monday - Friday: 7:00am - 8:00pm<br>
+            Saturday: 8:00am - 7:00pm<br>
+            Sunday: 8:00am - 5:00pm
+        </div>
+    </section>
+    </div>
+<!-- Repairs Section End -->
+
+<footer class="footer" id="contact">
+    <div class="footer__newsletter">
+        <h4>Receive updates via mail</h4>
+
+        <form action="#" method="post" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Copper Cup newsletter!');">
+            <input type="email" name="Email" placeholder="Your email address" required aria-label="Email address for newsletter">
+            <button type="submit" aria-label="Subscribe to Copper Cup updates"><i class="fa-regular fa-paper-plane fa-lg" style="color: #000000;"></i></button>
+        </form>
+        <span>Get news on workshops, group rides, and fresh roasts.</span> 
+    </div>
+
+    <div class="footer__contact">
+        <h4>Get in touch</h4>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:hello@coppercup.com" style="color: #FFF;">hello@coppercup.com</a></p>
+        <p><i class="fa-solid fa-wrench"></i> <a href="mailto:repairs@coppercup.com" style="color: #FFDE59;">repairs@coppercup.com</a> <span style="font-size: 11px; background:#FFDE59; color:#000; padding:1px 6px; border-radius:3px; font-weight:bold;">ALT</span></p>
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:+15552342877" style="color: #FFF;">+1 (555) 234-2877</a></p>
+        <p><i class="fa-brands fa-whatsapp"></i> <a href="tel:+15552342878" style="color: #FFDE59;">+1 (555) 234-2878</a> <span style="font-size: 11px; background:#FFDE59; color:#000; padding:1px 6px; border-radius:3px; font-weight:bold;">ALT</span></p>
+    </div>
+
+    <div class="footer__social">
+        <h4>Follow Us</h4>
+        <div style="margin: 0.8rem 0;">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Copper Cup on Facebook"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Copper Cup on Instagram"><i class="fa-brands fa-instagram fa-lg"></i></a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="Copper Cup on TikTok"><i class="fa-brands fa-tiktok fa-lg"></i></a>
+        </div>
+        <p style="font-size: 13px; color: #BBB; line-height: 1.4; margin-top: 0.8rem;">&copy; 2024–2026 Copper Cup | Your Bike Café.<br>All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

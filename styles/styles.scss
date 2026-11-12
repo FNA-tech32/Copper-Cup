@@ -1,0 +1,600 @@
+@import 'navbar';
+@import 'variables';
+@import 'media-queries';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $aleo;
+    font-size: $aleo-M;
+}
+
+body {
+    background-color: $black;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-family: $bebas;
+    font-size: $bebas-XXL;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+}
+
+h3 {
+    font-family: $bebas;
+    font-size: $bebas-XL;
+    font-weight: normal;
+    letter-spacing: 0.2rem;
+}
+
+h4 {
+    font-family: $bebas;
+    font-size: $bebas-L;
+    font-weight: normal;
+    letter-spacing: 0.2rem;
+}
+
+h5 {
+    font-family: $bebas;
+    font-size: $bebas-M;
+    font-weight: normal;
+    letter-spacing: 0.2rem;
+}
+
+p {
+    font: $aleo $aleo-M;
+    text-align: justify;
+    word-spacing: 0.45rem;
+    text-justify: inter-character;
+}
+
+%big-links {
+    font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: $bebas-L;
+    color: $black;
+    letter-spacing: 0.1em;
+}
+
+a { 
+    text-decoration: none;
+}
+
+// Hero Section
+
+.hero {
+    background-color: $black;
+    color: $white;
+    height: 90%;
+    width: 100%;
+
+    @include mobile {
+        height: 37.5rem;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; //fractional unit, 2 gleichbreite Spalten
+        justify-content: space-between;
+        justify-items: center;
+        width: 100%;
+        margin-top: 6.25rem;
+        height:100%;
+        z-index: 1;
+
+        @include tablet {
+            grid-template-columns: 1fr;
+            height: 100%;
+            margin-top: 3.125rem;
+        }
+        @include mobile {
+            grid-template-columns: 1fr;
+            height: 100%;
+            margin-top: 3.125rem;
+        }
+
+        &--section {
+            margin: auto;
+            width: 25rem;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+
+            @include tablet {
+                background-color: $white;
+                border: 6px double $black;
+                color: $black;
+                width: 90%;
+                height: 100%;
+                margin-top: 0.1rem;
+            }
+    
+            @include mobile {
+                    background-color: $black;
+            }
+        }
+
+        &--left {
+            width: 100%;
+            line-height: 1.2;
+            display: grid;
+            align-items: center;
+            margin-bottom: 2rem;
+
+            @include tablet {
+                padding: 2rem 0; // top & bottom 5rem
+                background-image: url("https://mdohr07.github.io/coffeestop/images/clifford-VobvKmG-StA-unsplash.jpg");
+                background-size: cover;
+                margin-bottom: 0px;
+            }
+
+            @include mobile {
+                line-height: 1.3;
+                background-image: url("https://mdohr07.github.io/coffeestop/images/clifford-VobvKmG-StA-unsplash.jpg");
+                background-size: cover;
+                margin-bottom: 0px;
+            }
+        }
+
+
+        &--left h1 {
+            font-size: $bebas-XXL;
+            text-align: center;
+            letter-spacing: 0.3rem;;
+
+            @include tablet {
+                font-size: $bebas-XL;
+            }
+        }
+
+        &--left p {
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: $aleo-XL;
+            line-height: 1.5em;
+
+            @include tablet {
+                font-size: $aleo-L;
+                line-height: 1.4em;
+            }
+            
+        }
+
+//button ------------------------------
+
+        &--btn, button {
+            @extend %big-links;
+            @extend %align-center;
+            background: $yellow;
+            border: none;
+            padding: 0.5em;
+            border-radius: 7px;
+            line-height: 2.5rem;
+            outline: none;
+            position: relative;
+            display: grid;
+            align-items: center;
+        }
+
+        &--btn a {
+            @extend %big-links;
+            position: relative;
+            z-index: 2;
+            text-decoration: none; 
+            width: 100%;   
+          }
+
+          &--btn:hover a {
+            color: $beige;
+            transition: all 0.3s;
+        }
+
+        &--btn:after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: $coffee;
+            transition: all 0.3s;
+            border-radius: 7px;
+          }
+      
+          &--btn:hover:after {
+            width: 100%;
+          }
+
+// End of buttons 💀
+      
+          &--right {
+            background-image: url("https://mdohr07.github.io/coffeestop/images/clifford-VobvKmG-StA-unsplash.jpg");
+            background-size: cover;
+            text-align: center;
+            width: 100%;
+          }
+      
+          &--img {
+            height: 90vh;
+            width: 100%;
+          }
+    }
+}
+
+.specialities {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background-color: $beige;
+    color: $black;
+
+    @include tablet {
+        text-align: center;
+        grid-template-columns: 1fr;  
+    }
+
+    @include mobile {
+        text-align: center;
+        grid-template-columns: 1fr;  
+        
+    }
+
+    .gallery-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5% auto 10%;
+
+        #prevBtn, #nextBtn {
+            cursor: pointer;
+            margin: 40px;
+            width: 40px;
+
+            @include tablet {
+                width: 0px;
+                height:0px;
+                padding: 0px;
+                margin: 0px;
+                opacity: 0;
+            }
+        
+            @include mobile {
+                width: 0px;
+                height:0px;
+                padding: 0px;
+                margin: 0px; 
+                opacity: 0;
+            }
+        }
+    }
+
+    &__head {
+    display: grid;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+    height: auto;
+    background-color: $beige;
+    color: $black;
+    }
+
+    .specialities__gallery {
+        width: 1000px;
+        display: flex;
+        overflow-x: scroll;
+
+        @include tablet {
+            width: 300px;
+            display:grid;
+            overflow:hidden;
+        }
+    
+        @include mobile {
+            width: 300px;    
+            display:grid;
+            overflow:hidden;
+        }
+
+        & > div {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); // 3 in 1 row
+            grid-gap: 20px;
+            padding: 10px;
+
+            @include tablet {
+                grid-gap: 10px;
+                padding: 5px;
+                grid-template-columns: repeat (2, 1fr);
+            }
+        
+            @include mobile {
+                grid-gap: 10px;
+                padding: 5px;   
+                grid-template-columns: repeat (2, 1fr);
+            }
+        }
+
+        img {
+            width: auto;
+            max-height: 200px;
+            transition: 0.5s;
+            filter: brightness(90%);
+
+            @include tablet {
+                max-height: 100px;
+            }
+        
+            @include mobile {
+                max-height: 100px;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+                filter: brightness(100%);
+
+                @include tablet {
+                    transform: none;
+                }
+            
+                @include mobile {
+                    transform: none; 
+                }
+            }
+        }
+
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+    }
+}
+
+.repairs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: left;
+    width: 100%;
+    min-height: 50vh;
+    margin: 0 auto;
+    background-color: $white;
+    color: $black;
+
+    @include tablet {
+        grid-template-columns: 1fr;
+    }
+
+    &__bg {
+        width: 100%;
+        height: 40vh;
+        background-image: url('../images/mechanic-repairing-bicycle.jpg'), url('https://mdohr07.github.io/coffeestop/images/mechanic-repairing-bicycle.jpg');
+        background-size: cover;
+        background-position-y: center;
+    }
+
+    &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em;
+    
+    @include tablet {
+        text-align: center;
+    }
+
+    h2 {
+        color: $yellow;
+        line-height: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        margin-bottom: 2rem;
+    }
+
+    h4 {
+        width: 90%;
+        margin-bottom: 2rem;
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    p, section {
+        @include tablet {
+            text-align: center;
+        }
+    }
+
+    .repairs__contact-details {
+        p {
+            line-height: 1.6;
+            word-spacing: normal;
+            text-align: left;
+            @include tablet {
+                text-align: center;
+            }
+        }
+    }
+    }
+
+    .contact-link {
+        color: $coffee;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            color: $black;
+            text-decoration: underline;
+        }
+    }
+
+    .contact-badge {
+        display: inline-block;
+        background-color: $yellow;
+        color: $black;
+        font-size: 11px;
+        font-weight: bold;
+        padding: 1px 6px;
+        border-radius: 4px;
+        vertical-align: middle;
+        margin-left: 4px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+
+    &__middle {
+        padding: 2em;
+        background-color: $white;
+
+        @include tablet {
+            height: 300px;
+            padding: 0;
+        }
+
+        iframe {
+            margin-top: 0.5rem;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            border: none;
+
+            @include tablet {
+                border-radius: 0%;
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2em;
+        background-color: $white;
+
+        address {
+            margin-top: 0.5rem;
+            margin-bottom: 1.2rem;
+            font-style: normal;
+            line-height: 1.5;
+        }
+
+        p {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        .opening-times {
+            margin-top: 1rem;
+            line-height: 1.6;
+        }
+    }
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: $white;
+    background-color: $black;
+    padding: 2rem;
+    width: 100%;
+
+    @include tablet {
+        text-align: center;
+        grid-template-columns: 1fr;  
+        
+    }
+
+    p {
+        margin-top: 0.5rem;
+
+        @include tablet {
+            text-align: center;
+        }
+    }
+
+    span {
+        font-size: smaller;
+        color: $yellow;
+    }
+
+    &__newsletter {
+
+        @include tablet {
+            width: 100%;
+        }
+
+        form {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            background-color: $white;
+            display: flex;
+            width: fit-content;
+
+            @include tablet {
+                margin: 0 auto;
+            }
+            
+            @include mobile {
+                margin: 0 auto;
+            }
+
+            input {
+                border: 0;
+                outline: none;
+                padding: 10px 20px;
+                height: 50px;
+                width: 90%;
+            }
+
+            button {
+                background-color: $yellow;
+                border: 0;
+                outline: none;
+                height: 50px;
+                width: 65px;
+                cursor: pointer;
+                padding: 5px;
+            }
+        }
+    }
+
+    &__contact {
+        margin-left: 1.3rem;
+
+        @include tablet {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 2rem;
+        }
+    }
+
+    &__social {
+        margin-left: 2.8rem;
+
+        @include tablet {
+            width: 100%;
+            margin-left: 0.7rem;
+            margin-top: 1rem;
+        }
+    }
+
+    .fa-brands {
+        color: $yellow;
+        margin-right: 1.5rem;
+    }
+}
+
+// Animation 
+.hidden {
+    opacity: 0;
+    transition: all 2s;
+}
+
+.show {
+    opacity: 1;
+}
